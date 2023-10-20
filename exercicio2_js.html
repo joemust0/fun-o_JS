@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicos 2 JS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body{
+        text-align: center;
+        background-color:lightblue;
+        color: blue;
+        padding-top: 80px;
+        font-size: 24pt;
+        }
+        .bt{
+            border: 2px double navy;
+            box-shadow: inset -4px, -5px, 5px black;
+            box-sizing: border-box;
+            border-radius: 50px;
+            background-color: lightcyan;
+            color:darkblue;
+            padding: 15px;
+            width: 200px;
+            margin: 10px;
+            text-align: center;
+        }
+        .bd{
+            border: 2px double navy;
+            box-shadow: inset -4px, -5px, 5px black;
+            box-sizing: border-box;
+            border-radius: 20px;
+            background-color: lightcyan;
+            color:darkblue;
+            padding: 15px;
+            width: 150px;
+            margin: 10px;
+            text-align: center;
+        }
+        .bt:hover{
+            border: 2px double white;
+            box-sizing: border-box;
+            box-shadow: inset 2px, 3px, 2px darkgoldenrod;
+            background-color: lightseagreen;
+            color: black;
+            font-weight: bold;
+            width: 20%;
+        }
+        .bt:active{
+            box-shadow: inset -2px, -3px, 2px rgb(0,0,0,0.6);
+            width: 10%;
+        }
+    </style>
+    <script>
+
+        function cubo(){
+
+           var n1 = parseFloat(document.getElementById("n1").value);
+           n1=n1*n1;
+           
+           document.getElementById("cb").innerHTML =("O numero elevado ao cubo é "+n1);
+        };
+
+    </script>
+</head>
+<body>
+ <input class="bd" type="number" id="n1" placeholder="Digite um valor" width="10px">
+ <br>
+ <input class="bt" type="button" name="bt2" value="Cubo" onclick="cubo()">
+ <p id="cb"></p>
+</body>
+</html>

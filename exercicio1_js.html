@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercico 1 JS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body{
+        text-align: center;
+        background-color:black;
+        color: lightskyblue;
+        padding-top: 80px;
+        font-size: 24pt;
+        }
+        .bt{
+            border: 3px solid darkgoldenrod;
+            box-shadow: inset 4px, 5px, 3px whitesmoke;
+            box-sizing: border-box;
+            border-radius: 50px;
+            background-color: brown;
+            color:aliceblue;
+            padding: 15px;
+            width: 200px;
+            margin: 10px;
+            ;
+        }
+        .bd{
+            background-color: navy;
+            color: lightblue;
+        }
+        .bt:hover{
+            border: 2px double white;
+            box-sizing: border-box;
+            box-shadow: inset -2px, -3px, 2px darkgoldenrod;
+            background-color: lightseagreen;
+            color: black;
+            font-weight: bold;
+            width: 20%;
+        }
+        .bt:active{
+            box-shadow: inset -2px, -3px, 2px rgb(0,0,0,0.6)
+        }
+    </style>
+    <script>
+
+        function bomdia(){
+        let ola=document.getElementById("ola").innerHTML =("Bom dia, Mundo!!!");
+        
+        }
+    </script>
+</head>
+<body>
+ <input class="bt" type="button" name="bt1" value="Bom Dia" onclick="bomdia()">
+ <p id="ola"></p>
+</html>

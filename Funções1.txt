@@ -1,0 +1,88 @@
+1. Escreva uma função em JavaScript que mostre na tela a mensagem “Bom dia, Mundo!!!”.
+
+function mostraMensagem() {
+    document.write("Bom dia, Mundo!!!");
+}
+
+
+2. Escreva uma função que retorne o cubo de um número fornecido pelo usuário.
+
+function calculaCubo(num) {
+    return num*num*num;
+}
+
+3. Escreva uma função em JavaScript que realize a conversão de uma temperatura fornecida em graus Fahrenheit (F) para Celsius (C).
+
+function converteFparaC(F) {
+    var celsius = (F - 32) * (5 / 9)
+    return celsius;
+}
+
+teste a função 
+
+document.write(converteFparaC(212));
+
+Dica: para converter uma temperatura em F para C, subtraia 32 da temperatura e multiplique o resultado por 0,5556 (ou 5/9).
+
+4. Escreva uma função que retorne a área de um triângulo, a partir dos valores de base e altura fornecidos.
+
+function areaTriangulo(b, a) {
+    var area = (b * a) / 2
+    return area;
+}
+
+Exemplo: Qual a área de um triângulo cuja base mede 5cm e a altura, 10cm?
+
+var base = 5
+var altura = 10
+document.write("Área do triângulo: " + areaTriangulo(base, altura) + " cm²")
+
+
+
+5. Escreva uma função que encontre a área e o perímetro de um círculo, de acordo com o raio fornecido.
+
+function calculaCirculo(raio) {
+    return `Perímetro: ${2*Math.PI*raio} <br> Área: ${Math.PI*raio*raio}`;
+}
+
+Teste com um círculo de raio 10:
+
+document.write(calculaCirculo(10));
+
+
+6. Escreva uma função que mostre na tela um número fornecido pelo usuário, porém invertido. Por exemplo, o usuário fornece o número 875 e a função mostra na tela o número 578.
+
+function inverteNum(num) {
+    var inverso = 0;
+    while(num != 0)
+    {
+        inverso = inverso * 10;
+        inverso = inverso + num % 10;
+        num = Math.trunc(num/10); // Remover casas decimais
+    }
+    return inverso;
+}
+
+Inicializa a variável "inverso" como 0. Essa variável será usada para armazenar o número invertido.
+Enquanto o valor de "num" for diferente de zero, repete as etapas a seguir:
+a. Multiplica o valor atual de "inverso" por 10.
+b. Adiciona ao valor de "inverso" o resto da divisão de "num" por 10. Isso é feito usando o operador de módulo (%), que retorna o resto da divisão.
+c. Atualiza o valor de "num" dividindo-o por 10 e removendo as casas decimais usando a função Math.trunc(). Isso move o dígito mais à direita de "num" para a próxima iteração.
+Retorna o valor de "inverso", que será o número original fornecido com seus dígitos invertidos.
+Por exemplo, se chamarmos a função "inverteNum(1234)", ela irá executar as etapas do algoritmo da seguinte maneira:
+
+No primeiro loop: inverso = 0 * 10 + 1234 % 10 = 4, num = Math.trunc(1234/10) = 123.
+No segundo loop: inverso = 4 * 10 + 123 % 10 = 43, num = Math.trunc(123/10) = 12.
+No terceiro loop: inverso = 43 * 10 + 12 % 10 = 432, num = Math.trunc(12/10) = 1.
+No quarto loop: inverso = 432 * 10 + 1 % 10 = 4321, num = Math.trunc(1/10) = 0.
+Portanto, a função retornará o número 4321, que é o número fornecido (1234) com seus dígitos invertidos.
+
+
+
+
+
+
+
+
+
+

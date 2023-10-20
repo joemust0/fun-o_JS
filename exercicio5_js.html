@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicos JS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body{
+            text-align: center;
+            background-color:rgb(37, 71, 37);
+            color: lightcyan;
+            padding-top: 80px;
+            font-size: 24pt;
+        }
+        .bt{
+            border: 5px solid greenyellow;
+            box-shadow: inset 4px, -5px, 3px black;
+            box-sizing: border-box;
+            border-radius: 50px;
+            background-color: gray;
+            color:aliceblue;
+            padding: 15px;
+            width: 200px;
+            margin: 10px;
+
+        }
+        .bd{
+            border: 1px dashed darkcyan;
+            box-shadow: inset -4px, -5px, 5px black;
+            box-sizing: border-box;
+            border-radius: 20px;
+            background-color: lightcyan;
+            color:darkblue;
+            padding: 15px;
+            width: 150px;
+            margin: 10px;
+            text-align: center;
+        }
+        .bt:hover{
+            border: 2px double white;
+            box-sizing: border-box;
+            box-shadow: inset -2px, -3px, 2px darkgoldenrod;
+            background-color: lightseagreen;
+            color: black;
+            font-weight: bold;
+            width: 20%;
+        }
+    </style>
+    <script>
+        function circo(){
+
+            var raio=parseFloat(document.getElementById("raio").value);
+
+            var peri= 2*Math.PI*raio;
+            var area = Math.PI*raio*raio;
+
+            document.getElementById("area").innerHTML="A área do circulo é: "+area.toFixed(2)+" cm²"; 
+            document.getElementById("perimetro").innerHTML="O perimetro do circulo é: "+peri.toFixed(2)+" cm²"; 
+        }
+    </script>
+</head>
+<body>
+    <h4>Digite raio (r) da esfera : </h4>
+    <input class="bd" type="number" id="raio" placeholder="Raio" width="10px">
+    <br>
+    <input class="bt" type="button" name="bt5" value="Circulo" onclick="circo()">
+    <p id="area"></p>
+    <p id="perimetro"></p>
+</body>
+</html>
